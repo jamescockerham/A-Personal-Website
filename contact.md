@@ -5,9 +5,9 @@ layout: default
 
 # Contact
 
-james@cockerh.am  
+X: [@jamescockerham](https://x.com/jamescockerham)
 GitHub: [@jamescockerham](https://github.com/jamescockerham)  
-X: probably something clever
+Email: probably something clever
 
 Or just reply here — this site has no forms because static > everything.
 
