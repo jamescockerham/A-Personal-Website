@@ -3,7 +3,7 @@ title: Hey, I'm James 👋
 layout: default
 ---
 
-#He's
+# He's
 
 A builder of things that work.  
 Currently hacking on AI tools, Android apps, and far too many side projects.
