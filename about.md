@@ -21,4 +21,4 @@ Tools I live in:
 
 If you ever see a weird domain or a GitHub repo with 47 stars and 300 forks, it's probably me.
 
-[[Contact|Get in touch →](/contact)]
+[Contact|Get in touch →](/contact)
