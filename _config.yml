@@ -1,0 +1,14 @@
+title: James Cockerh.am
+description: Developer • Builder • Hacker of all the things
+url: https://james.cockerh.am
+theme: minima
+plugins:
+  - jekyll-seo-tag
+markdown: kramdown
+kramdown:
+  input: GFM
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
