@@ -11,4 +11,4 @@ X: probably something clever
 
 Or just reply here — this site has no forms because static > everything.
 
-[[Home|← Home]]
+[← Back Home](/)

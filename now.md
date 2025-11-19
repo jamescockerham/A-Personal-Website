@@ -15,4 +15,4 @@ What I'm doing right now:
 Last updated: November 18, 2025  
 (Yes, this page updates automatically when I push from Obsidian)
 
-[[Home|← Home]]
+[← Back Home](/)

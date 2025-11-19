@@ -8,13 +8,13 @@ layout: default
 Builder of things that work.  
 Currently hacking on AI tools, Android apps, and far too many side projects.
 
-Currently:
+**Currently:**
 - Deep into Grok 4, xAI stack, and prompt engineering
 - Obsidian + GitHub Pages (this site!)
 - Custom Android ROMs & Termux automation
 - Cloudflare + GitHub Actions workflows
 
-[[Projects|Latest Projects →]] | [[About|About me]] | [[Now|What I'm doing right now]]
+[Projects →](/projects) | [About](/about) | [Now](/now) | [Contact](/contact)
 
 <div class="card">
 <h3>Latest Obsidian Trick I'm Using</h3>
