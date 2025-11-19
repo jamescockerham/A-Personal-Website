@@ -1,6 +1,7 @@
 # james.cockerh.am
 
 👉 **Live site:** https://james.cockerh.am  
+👉 **www version:** https://www.james.cockerh.am
 
 Personal site & digital garden of James Cockerham  
 100 % Markdown → Obsidian → GitHub Pages → Cloudflare
