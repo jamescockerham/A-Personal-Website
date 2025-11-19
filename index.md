@@ -3,7 +3,9 @@ title: Hey, I'm James 👋
 layout: default
 ---
 
-Builder of things that work.  
+#He's
+
+A builder of things that work.  
 Currently hacking on AI tools, Android apps, and far too many side projects.
 
 **Currently:**
