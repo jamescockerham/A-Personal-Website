@@ -3,8 +3,6 @@ title: Hey, I'm James 👋
 layout: default
 ---
 
-# James Cockerh.am
-
 Builder of things that work.  
 Currently hacking on AI tools, Android apps, and far too many side projects.
 
