@@ -12,3 +12,5 @@ defaults:
       path: ""
     values:
       layout: default
+# Telegram username without the @ (e.g. telegram: someuser). Leave empty to hide the link.
+telegram: jamescockerham
