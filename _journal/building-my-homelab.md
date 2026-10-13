@@ -1,6 +1,7 @@
 ---
 title: "Test post: building my self-hosted homelab"
 date: 2026-10-13
+created: 2026-10-13T05:00:00-04:00
 ---
 *This is a test post for the new journal.*
 

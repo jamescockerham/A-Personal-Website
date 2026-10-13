@@ -6,10 +6,11 @@ description: Notes and journal entries by James Cockerham.
 <p class="kicker">$ ls -t ~/journal</p>
 <h1>Journal</h1>
 <p class="lede">Notes on what I'm building and learning, written from my phone.</p>
-{% assign entries = site.journal | sort: "date" | reverse %}
+{% assign loose = site.pages | where_exp: "p", "p.created" %}
+{% assign entries = site.journal | concat: loose | sort: "created", "first" | reverse %}
 <ul class="grid">
 {% for e in entries %}{% assign d = e.created | default: e.date %}
-  <li class="card"><span class="tag">{{ d | date: "%b %-d, %Y" }}</span><h3><a href="{{ e.url }}">{{ e.title | default: e.slug }}</a></h3><p>{{ e.excerpt | strip_html | truncatewords: 30 }}</p></li>
+  <li class="card"><span class="tag">{{ d | date: "%b %-d, %Y" }}</span><h3><a href="{{ e.url }}">{{ e.title | default: e.slug | default: e.name }}</a></h3><p>{{ e.excerpt | strip_html | truncatewords: 30 }}</p></li>
 {% else %}
   <li class="card"><p>No entries yet.</p></li>
 {% endfor %}
