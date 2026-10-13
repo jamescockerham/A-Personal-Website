@@ -1,0 +1,20 @@
+---
+permalink: /journal/feed.xml
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+{% assign loose = site.pages | where_exp: "p", "p.created" %}{% assign entries = site.journal | concat: loose | sort: "created", "first" | reverse %}<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.title | xml_escape }} · Journal</title>
+  <link href="{{ site.url }}/journal/feed.xml" rel="self"/>
+  <link href="{{ site.url }}/journal/"/>
+  <id>{{ site.url }}/journal/</id>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <author><name>James Cockerham</name></author>
+{% for e in entries limit:20 %}{% assign d = e.modified | default: e.created | default: e.date %}  <entry>
+    <title>{{ e.title | default: e.slug | default: e.name | xml_escape }}</title>
+    <link href="{{ site.url }}{{ e.url }}"/>
+    <id>{{ site.url }}{{ e.url }}</id>
+    <updated>{{ d | date_to_xmlschema }}</updated>
+    <summary>{{ e.content | strip_html | truncatewords: 50 | xml_escape }}</summary>
+  </entry>
+{% endfor %}</feed>
