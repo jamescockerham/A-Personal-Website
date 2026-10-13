@@ -5,7 +5,7 @@ description: Notes and journal entries by James Cockerham.
 ---
 <p class="kicker">$ ls -t ~/journal</p>
 <h1>Journal</h1>
-<p class="lede">Notes on what I'm building and learning, written from my phone.</p>
+<p class="lede">Notes on what I'm building and learning, written from my phone. <a href="/journal/feed.xml">RSS feed</a>.</p>
 {% assign loose = site.pages | where_exp: "p", "p.created" %}
 {% assign entries = site.journal | concat: loose | sort: "created", "first" | reverse %}
 <ul class="grid">
