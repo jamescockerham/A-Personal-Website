@@ -22,4 +22,4 @@ telegram: jamescockerham
 collections:
   journal:
     output: true
-    permalink: /journal/:title.html
+    permalink: /journal/:title/

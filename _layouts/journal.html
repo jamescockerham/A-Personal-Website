@@ -6,6 +6,6 @@ layout: default
 <article>
   {% unless content contains "<h1" %}<h1>{{ page.title | default: page.slug }}</h1>{% endunless %}
   <p class="note"><time datetime="{{ d | date_to_xmlschema }}">{{ d | date: "%B %-d, %Y" }}</time></p>
-  {{ content }}
+  {{ content | replace: 'src="./', 'src="/journal/' }}
   <p><a href="/journal/">&larr; All journal entries</a></p>
 </article>
