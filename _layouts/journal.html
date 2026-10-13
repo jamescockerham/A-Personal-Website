@@ -1,0 +1,11 @@
+---
+layout: default
+---
+{% assign d = page.created | default: page.date %}
+<p class="kicker">$ cat ~/journal/{{ page.slug }}.md</p>
+<article>
+  <h1>{{ page.title | default: page.slug }}</h1>
+  <p class="note"><time datetime="{{ d | date_to_xmlschema }}">{{ d | date: "%B %-d, %Y" }}</time></p>
+  {{ content }}
+  <p><a href="/journal/">&larr; All journal entries</a></p>
+</article>
