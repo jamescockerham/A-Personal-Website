@@ -1,44 +1,32 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title }} – James Cockerham</title>
+  <meta name="color-scheme" content="dark light">
   {% seo %}
   <link rel="stylesheet" href="/assets/style.css">
-  <link rel="icon" href="/assets/jc-favicon.png">
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="/" class="logo">James Cockerham</a>
-      <div class="links">
-        <a href="/projects">Projects</a>
-        <a href="/about">About</a>
-        <a href="/now">Now</a>
-        <a href="/contact">Contact</a>
-      </div>
-      <button id="theme-toggle">🌓</button>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="wrap" aria-label="Main">
+      <a href="/" class="logo"><span class="prompt">~/</span>james</a>
+      <ul>
+        <li><a href="/homelab/"{% if page.url == "/homelab/" %} aria-current="page"{% endif %}>Homelab</a></li>
+        <li><a href="/projects/"{% if page.url == "/projects/" %} aria-current="page"{% endif %}>Projects</a></li>
+        <li><a href="/about/"{% if page.url == "/about/" %} aria-current="page"{% endif %}>About</a></li>
+      </ul>
     </nav>
   </header>
-  <main>
+  <main id="main" class="wrap">
     {{ content }}
   </main>
-  <footer>
-    <p>© {{ site.time | date: "%Y" }} James Cockerham • Built with Obsidian + GitHub Pages</p>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>James Cockerham · Lexington, Kentucky</p>
+      <p><a href="https://github.com/jamescockerham">GitHub</a> · <a href="https://x.com/JamesCockerham">X</a> · <a href="https://cockerh.am">Cockerham family research</a></p>
+    </div>
   </footer>
-
-  <script>
-    const toggle = document.getElementById('theme-toggle');
-    const setTheme = (theme) => {
-      document.documentElement.setAttribute('data-theme', theme);
-      localStorage.setItem('theme', theme);
-      toggle.textContent = theme === 'dark' ? '🌙' : '☀️';
-    };
-    toggle.addEventListener('click', () => setTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'));
-    if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: light)').matches)) {
-      setTheme('light');
-    }
-  </script>
 </body>
 </html>

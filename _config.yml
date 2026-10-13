@@ -1,12 +1,12 @@
-title: James Cockerh.am
-description: Developer • Builder • Hacker of all the things
+title: James Cockerham
+description: Self-taught homelab builder in Lexington, Kentucky.
 url: https://james.cockerh.am
-theme: minima
 plugins:
   - jekyll-seo-tag
 markdown: kramdown
 kramdown:
   input: GFM
+exclude: [README.md]
 defaults:
   - scope:
       path: ""
