@@ -1,0 +1,16 @@
+---
+title: Blog
+permalink: /b/
+description: Posts by James Cockerham.
+---
+<p class="kicker">$ ls -t ~/blog</p>
+<h1>Blog</h1>
+<p class="lede">Trip guides, notes, and things worth sharing.</p>
+{% assign posts = site.blog | where_exp: "p", "p.unlisted != true" | sort: "date" | reverse %}
+<ul class="grid">
+{% for p in posts %}
+  <li class="card"><span class="tag">{{ p.date | date: "%b %-d, %Y" }}</span><h3><a href="{{ p.url }}">{{ p.title }}</a></h3><p>{{ p.summary | default: p.excerpt | strip_html | truncatewords: 30 }}</p></li>
+{% else %}
+  <li class="card"><p>No posts yet.</p></li>
+{% endfor %}
+</ul>

@@ -1,0 +1,11 @@
+---
+layout: default
+---
+{% assign key = page.slug %}
+<p class="kicker"><a href="/b/">&larr; Blog</a></p>
+<article class="post">
+  <h1>{{ page.title }}</h1>
+  <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time></p>
+  {{ content }}
+  <p class="post-foot"><a href="/b/">&larr; All posts</a> · <a href="/b/{{ key }}/qr/">QR code</a></p>
+</article>
