@@ -32,3 +32,6 @@ collections:
   blog_qr:
     output: true
     permalink: /b/:slug/qr/
+# Full profile URLs. Leave empty to hide the link.
+rumble_url: https://rumble.com/user/JamesCockerham
+robinhood_url: https://robinhood.com/social/profiles/jamesocockerham

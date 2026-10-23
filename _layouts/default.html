@@ -24,7 +24,7 @@
   <footer class="site-footer">
     <div class="wrap">
       <p>James Cockerham · Lexington, Kentucky</p>
-      <p>{% if site.telegram %}<a href="https://t.me/{{ site.telegram }}">Telegram</a>{% endif %}</p>
+      <p>{% if site.telegram %}<a href="https://t.me/{{ site.telegram }}">Telegram</a>{% endif %}{% if site.rumble_url %} · <a href="{{ site.rumble_url }}">Rumble</a>{% endif %}{% if site.robinhood_url %} · <a href="{{ site.robinhood_url }}">Robinhood</a>{% endif %}</p>
     </div>
   </footer>
 </body>
