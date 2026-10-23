@@ -1,0 +1,44 @@
+media:
+  input: assets/blog
+  output: /assets/blog
+content:
+  - name: home
+    label: Landing page
+    type: file
+    path: index.html
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Title, type: string }
+      - { name: description, label: Description (search/social preview), type: text }
+      - { name: body, label: Page content (HTML), type: code, options: { language: html } }
+  - name: about
+    label: About
+    type: file
+    path: about.html
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Title, type: string }
+      - { name: permalink, label: Permalink, type: string, hidden: true, default: /about/ }
+      - { name: description, label: Description (search/social preview), type: text }
+      - { name: body, label: Page content (HTML), type: code, options: { language: html } }
+  - name: blog
+    label: Blog posts
+    type: collection
+    path: _blog
+    filename: "{fields.slug}.md"
+    view:
+      fields: [title, date, unlisted]
+      primary: title
+      sort: [date, title]
+      default: { sort: date, order: desc }
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - name: slug
+        label: Slug
+        type: string
+        required: true
+        description: "Lowercase-with-hyphens. Becomes /b/<slug>/. NEVER change once the QR code has been shared."
+      - { name: date, label: Date, type: date, required: true }
+      - { name: summary, label: Summary, type: text, description: Shown on /b/ }
+      - { name: unlisted, label: Hidden from /b/ list, type: boolean, default: false }
+      - { name: body, label: Body, type: rich-text }
