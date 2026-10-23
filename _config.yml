@@ -14,11 +14,6 @@ defaults:
       layout: default
   - scope:
       path: ""
-      type: journal
-    values:
-      layout: journal
-  - scope:
-      path: ""
       type: blog
     values:
       layout: blog
@@ -31,9 +26,6 @@ defaults:
 # Telegram username without the @ (e.g. telegram: someuser). Leave empty to hide the link.
 telegram: jamescockerham
 collections:
-  journal:
-    output: true
-    permalink: /journal/:title/
   blog:
     output: true
     permalink: /b/:slug/
