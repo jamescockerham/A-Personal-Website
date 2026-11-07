@@ -13,8 +13,9 @@
     <nav class="wrap" aria-label="Main">
       <a href="/" class="logo"><span class="prompt">~/</span>james</a>
       <ul>
-        <li><a href="/b/"{% if page.url contains "/b/" %} aria-current="page"{% endif %}>Blog</a></li>
+        <li><a href="/"{% if page.url == "/" %} aria-current="page"{% endif %}>Home</a></li>
         <li><a href="/about/"{% if page.url == "/about/" %} aria-current="page"{% endif %}>About</a></li>
+        <li><a href="/b/"{% if page.url contains "/b/" %} aria-current="page"{% endif %}>Blog</a></li>
       </ul>
     </nav>
   </header>
@@ -24,7 +25,7 @@
   <footer class="site-footer">
     <div class="wrap">
       <p>James Cockerham · Lexington, Kentucky</p>
-      <p>{% if site.telegram %}<a href="https://t.me/{{ site.telegram }}">Telegram</a>{% endif %}{% if site.rumble_url %} · <a href="{{ site.rumble_url }}">Rumble</a>{% endif %}{% if site.robinhood_url %} · <a href="{{ site.robinhood_url }}">Robinhood</a>{% endif %}</p>
+      <p><a href="https://substack.com/@krviewer">Substack</a></p>
     </div>
   </footer>
 </body>
