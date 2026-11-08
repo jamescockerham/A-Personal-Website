@@ -1,5 +1,5 @@
 title: James Cockerham
-description: Self-taught homelab builder in Lexington, Kentucky.
+description: Personal website and travel blog.
 url: https://james.cockerh.am
 plugins:
   - jekyll-seo-tag
@@ -14,12 +14,24 @@ defaults:
       layout: default
   - scope:
       path: ""
-      type: journal
+      type: blog
     values:
-      layout: journal
+      layout: blog
+  - scope:
+      path: ""
+      type: blog_qr
+    values:
+      layout: blog_qr
+      sitemap: false
 # Telegram username without the @ (e.g. telegram: someuser). Leave empty to hide the link.
 telegram: jamescockerham
 collections:
-  journal:
+  blog:
     output: true
-    permalink: /journal/:title/
+    permalink: /b/:slug/
+  blog_qr:
+    output: true
+    permalink: /b/:slug/qr/
+# Full profile URLs. Leave empty to hide the link.
+rumble_url: https://rumble.com/user/JamesCockerham
+robinhood_url: https://robinhood.com/social/profiles/jamesocockerham

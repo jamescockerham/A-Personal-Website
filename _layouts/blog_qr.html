@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  {% assign post = site.blog | where: "slug", page.slug | first %}
+  {% assign short = site.url | remove: "https://" | append: "/b/" | append: page.slug | append: "/" %}
+  <title>QR: {{ post.title | default: page.slug }}</title>
+  <style>
+    body{margin:0;font:18px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#000;background:#fff;text-align:center}
+    .qr-wrap{max-width:32rem;margin:2rem auto;padding:1rem}
+    #qr svg{width:100%;height:auto;max-width:28rem}
+    h1{font-size:1.6rem;margin:1rem 0 .25rem}
+    .url{font:600 1.1rem ui-monospace,Menlo,Consolas,monospace;word-break:break-all;margin:0}
+    .tools{margin-top:1.5rem;font-size:.95rem}
+    .tools a,.tools button{color:#0f766e;font:inherit;background:none;border:1px solid #0f766e;border-radius:8px;padding:.4rem .9rem;margin:.3rem;cursor:pointer;text-decoration:none}
+    @media print{.tools{display:none}.qr-wrap{margin:0 auto}@page{margin:1.5cm}}
+  </style>
+</head>
+<body>
+  <div class="qr-wrap">
+    <div id="qr" data-url="{{ site.url }}/b/{{ page.slug }}/" role="img" aria-label="QR code for {{ short }}"></div>
+    <h1>{{ post.title | default: page.slug }}</h1>
+    <p class="url">{{ short }}</p>
+    <p class="tools"><button onclick="window.print()">Print</button><a href="/b/{{ page.slug }}/">Back to post</a></p>
+  </div>
+  <script src="/assets/blog/qrcode.js"></script>
+  <script>
+    (function(){var el=document.getElementById('qr');var q=qrcode(0,'M');q.addData(el.dataset.url);q.make();el.innerHTML=q.createSvgTag({cellSize:8,margin:4,scalable:true});})();
+  </script>
+  <noscript><p>Enable JavaScript to draw the QR code. Link: {{ short }}</p></noscript>
+</body>
+</html>
