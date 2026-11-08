@@ -1,3 +1,0 @@
----
-slug: greyhound-hammock-trips
----

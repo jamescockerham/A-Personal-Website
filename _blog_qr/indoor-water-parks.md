@@ -1,3 +1,0 @@
----
-slug: indoor-water-parks
----
