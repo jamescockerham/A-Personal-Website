@@ -1,0 +1,3 @@
+---
+slug: trips-by-season
+---
